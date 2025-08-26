@@ -5,10 +5,10 @@
  */
 
 const mongoose = require('mongoose');
-
+require("dotenv").config()
 const connectDB = async () => {
   try {
-    const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/email_analysis';
+    const mongoURI = process.env.MONGODB_URI 
     
     const options = {
       maxPoolSize: 10, // Maintain up to 10 socket connections

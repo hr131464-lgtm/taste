@@ -1,14 +1,10 @@
-/**
- * Database Configuration
- * 
- * Handles MongoDB connection setup and configuration
- */
+
 
 const mongoose = require('mongoose');
-
+require("dotenv").config()
 const connectDB = async () => {
   try {
-    const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/email_analysis';
+    // const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/email_analysis';
     
     const options = {
       useNewUrlParser: true,
